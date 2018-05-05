@@ -12,23 +12,32 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-  }
 
-  &__pagename {
-    font-size: 15px;
-    font-weight: 500;
-    color: white;
-    background-color: $c_red;
-    padding: 17px 16px 13px;
-    position: relative;
+    &-pagename {
+      font-size: 15px;
+      font-weight: 500;
+      color: white;
+      background-color: $c_red;
+      padding: 17px 16px 13px;
+      position: relative;
 
-    &:after {
-      content: '';
-      border-left: 45px solid $c_red;
-      border-top: 45px solid alpha($c_red, 0%);
-      position: absolute;
-      bottom: 0;
-      left: 100%;
+      &:after {
+        content: '';
+        border-left: 45px solid $c_red;
+        border-top: 45px solid alpha($c_red, 0%);
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+      }
+    }
+
+    &-btn {
+      display: inline-block;
+      font-size: 15px;
+      color: $c_text;
+      background-color: #dfe3e4;
+      border-bottom: 1px solid #b0babd;
+      padding: 13px 15px 11px;
     }
   }
 }

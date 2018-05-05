@@ -1,0 +1,30 @@
+.categories {
+  //
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__clear {
+    margin-top: 25px;
+
+    a {
+      font-size: 15px;
+      color: $c_text;
+      border-bottom: 1px dashed #bebebf;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 1px solid #bebebf;
+      }
+    }
+  }
+}

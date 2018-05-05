@@ -18,10 +18,10 @@ html(lang="ru")
 
             .body__inner
                 .body__top
-                    .body__left
-                        .body__pagename FAQ
-                    .body__right
-                        a.body__btn Задать вопрос
+                    .body__top-left
+                        .body__top-pagename FAQ
+                    .body__top-right
+                        a.body__top-btn Задать вопрос
 
                 .body__content
                     .content
@@ -32,6 +32,24 @@ html(lang="ru")
                                 .content__more Показать еще
 
                             .content__right
+                                .categories
+                                    .categories__title Категории
+                                    .categories__radios
+                                        .categories__item
+                                            .el-radio
+                                                input(type="radio" id="category-all" name="category")
+                                                label(for="category-all") Все
+                                        .categories__item
+                                            .el-radio
+                                                input(type="radio" id="category-that" name="category")
+                                                label(for="category-that") Только те
+                                        .categories__item
+                                            .el-radio
+                                                input(type="radio" id="category-other" name="category")
+                                                label(for="category-other") Только другие
+
+                                    .categories__clear
+                                        a Сбросить всё
 
             .body__footer
                 include ./html/components/footer
