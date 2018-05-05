@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 27px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

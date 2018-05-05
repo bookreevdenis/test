@@ -1,0 +1,40 @@
+.header {
+  background-color: $c_dark;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    height: 78px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    width: 248px;
+    height: 35px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: $c_red;
+    }
+  }
+
+  &__search {
+    &-icon {
+      width: 26px;
+      height: 26px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: white;
+      }
+    }
+  }
+
+  &__user {
+    width: 215px;
+  }
+}
