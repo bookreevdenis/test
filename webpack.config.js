@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
   entry: {
@@ -19,11 +20,13 @@ const config = {
       },
       {
         test: /\.styl$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "stylus-loader"
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: ["css-loader", "stylus-loader"]
+        })
+        // use: {
+        //   loader: ExtractTextPlugin.extract('style', 'css!stylus')
+        // }
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
@@ -57,8 +60,9 @@ const config = {
       template: './src/index.pug'
     }),
     new CopyWebpackPlugin([
-      { from: './src/static', }
-    ])
+      { from: './src/static' }
+    ]),
+    new ExtractTextPlugin('app.css')
   ]
 };
 

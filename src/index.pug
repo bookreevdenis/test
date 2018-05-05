@@ -7,7 +7,7 @@ html(lang="ru")
         meta(name="format-detection" content="telephone=no")
         meta(name="apple-mobile-web-app-capable" content="yes")
 
-        title Project Name
+        title Changellenge
 
     body
         include ./html/assets/svg.html
@@ -23,4 +23,15 @@ html(lang="ru")
                     .body__right
                         a.body__btn Задать вопрос
 
+                .body__content
+                    .content
+                        .content__inner
+                            .content__left
+                                include ./html/pages/faq
+
+                                .content__more Показать еще
+
+                            .content__right
+
             .body__footer
+                include ./html/components/footer
