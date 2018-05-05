@@ -1,0 +1,73 @@
+.footer {
+  background-color: $c_dark;
+
+  &__inner {
+    max-width: 1240px;
+    padding: 38px 0;
+    margin: 0 auto;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+
+  &__copy {
+    font-size: 16px;
+    color: #dfe3e4;
+  }
+
+  &__nav {
+    display: flex;
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+
+    &-link {
+      font-size: 16px;
+      color: white;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: flex-end;
+
+    &-link {
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 22px;
+      }
+
+      &:hover {
+        svg {
+          fill: $c_red;
+        }
+      }
+
+      svg {
+        fill: white;
+        transition: 0.2s ease-out;
+      }
+
+      &._fb {
+        svg {
+          width: 16px;
+          height: 30px;
+        }
+      }
+
+      &._vk {
+        svg {
+          width: 30px;
+          height: 17px;
+        }
+      }
+    }
+  }
+}
