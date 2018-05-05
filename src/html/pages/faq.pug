@@ -1,12 +1,23 @@
 .content__faq
     .content__faq-header
         .searchbar
-            .searchbar__left
-                .searchbar__input
-                    input
+            .searchbar__inner
+                .searchbar__inner-left
+                    .searchbar__input
+                        i.searchbar__input-loupe
+                            svg
+                                use(xlink:href="#svg-search-icon")
+                        input.searchbar__input-field(placeholder="Поиск")
 
-            .searchbar__right
-                .searchbar__select
+                .searchbar__inner-right
+                    .searchbar__select
+                        .el-select
+                            .el-select__header
+                                span.el-select__chosen Сначала популярные
+                            ul.el-select__list
+                                li.el-select__list-li._active(data-value="popular") Сначала популярные
+                                li.el-select__list-li(data-value="new") Сначала новые
+                                li.el-select__list-li(data-value="old") Сначала старые
 
 
     .content__faq-questions

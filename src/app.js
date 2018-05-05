@@ -1,4 +1,6 @@
 import css from "./css/app.styl"
 import device from 'current-device'
 
-console.log(`Webpack is loaded successfully`);
+import Select from './js/select';
+const select = new Select();
+select.initAll();
